@@ -36,12 +36,14 @@ const HomeProductImageCard = () => {
       {homePageProductData &&
         homePageProductData.map((prod) => (
           <div className="home-card" onClick={()=>navigate(`/${prod.apiText}`)} role="button" tabIndex='0'>
+            {/* <span class="tooltiptext">{prod.text}</span> */}
             <div
               key={prod.id}
               className="home-card-image"
               style={{
                 backgroundImage: `url(${prod.image})`,
                 backgroundSize: "cover",
+                alt:`${prod.text}`
               }}
             ></div>
             <h1>{prod.text}</h1>

@@ -28,12 +28,12 @@ const Home = () => {
         <p className='primary-text'>
           NEW SEASON. NEW MOOD. NEW YOU. 
         </p>
-        <button className="secondary-button">
+        <button className="secondary-button" tabIndex='0' role="button">
             View more <FiArrowRight />{" "}
           </button>
       </div>
       <div className='home-image-section'>
-        <img src={adImage} alt=""/>
+        <img src={adImage} alt="background-image"/>
       </div>
     </div>
     <div className='card-container'>

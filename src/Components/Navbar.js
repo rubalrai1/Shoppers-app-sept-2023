@@ -1,9 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate} from 'react-router-dom';
 import Logo from "../Images/shop-removebg-preview.png";
 import { BsCart2 } from "react-icons/bs";
 import { HiOutlineBars3 } from "react-icons/hi2";
-//import AiOutlineHeart from 'react-icons/ai'
-import { AiOutlineHeart } from "@react-icons/all-files/ai/AiOutlineHeart";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -23,6 +22,10 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const navigate=useNavigate();
+  const navigateHome = () => {
+    navigate('/');
+  };
   const menuOptions = [
     {
       text: "Home",
@@ -55,7 +58,7 @@ const Navbar = () => {
   ];
   return (
     <nav>
-      <div className="nav-logo-container">
+      <div className="nav-logo-container" onClick={navigateHome}>
         <img src={Logo} alt="logo" />
       </div>
       <div className="navbar-links-container">

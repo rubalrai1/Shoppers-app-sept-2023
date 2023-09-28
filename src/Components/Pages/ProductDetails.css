@@ -43,6 +43,7 @@
   .product-card-image{
     height: 587px;
     width: 100%;
+    background-repeat: no-repeat;
     /* aspect-ratio: auto;
     padding: 163px 0px 147px; */
   }
@@ -119,8 +120,8 @@
     text-align: center;
   }
   
-  .action {
-    width: 100%;
+  .detail-action {
+    /* width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -133,6 +134,7 @@
     padding: 15px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    margin-top: 15px; */
     margin-top: 15px;
   }
   
@@ -150,6 +152,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+            padding-left: 47%;
   }
   
   .priceGroup .price {

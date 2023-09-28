@@ -10,8 +10,6 @@ const ProductData = ({ category }) => {
     apiData.filter((data) => {
       return data.category === category;
     });
-  console.log(data, "rubal");
-  console.log(apiData, "rubalapi");
 
   return (
     <div className="product-data-container">
