@@ -4,17 +4,10 @@ import './errorboundary.css'
 
 const ErrorBoundary = () => {
   return (
-    // <div className="error-card">
             <img
               className="error-image"
-            //   style={{
-            //     backgroundImage: errorImage,
-            //     backgroundSize: "cover",
-            //     alt:`error-image`
-            //   }}
             src ={errorImage} alt= "errorImg"
             ></img>
-        //   </div>
   )
 }
 

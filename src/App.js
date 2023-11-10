@@ -1,6 +1,5 @@
 import "./App.css";
-import React, {useEffect} from "react";
-import { useLocation } from 'react-router-dom';
+import React from "react";
 import Home from "./Components/Pages/Home";
 import Electronics from "./Components/Pages/Electronics";
 import MensClothing from "./Components/Pages/MensClothing";
@@ -11,8 +10,9 @@ import Cart from "./Components/Pages/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DataStorage from "./Components/Pages/context/DataStorage";
 import ProductDetails from "./Components/Pages/ProductDetails";
-import AddToCart from "./Components/Pages/context/AddToCard";
+import CartProvider from "./Components/Pages/context/cart";
 import ScrollToTop from "./Components/ScrollToTop";
+import WishlistProvider from "./Components/Pages/context/wishlist";
 
 function App() {
 
@@ -20,7 +20,8 @@ function App() {
     <>
       <div className="App">
         <DataStorage>
-          <AddToCart>
+          <CartProvider>
+            <WishlistProvider>
             <BrowserRouter>
              <ScrollToTop>
               <Routes>
@@ -51,7 +52,8 @@ function App() {
               </Routes>
               </ScrollToTop>
             </BrowserRouter>
-          </AddToCart>
+            </WishlistProvider>
+          </CartProvider>
         </DataStorage>
       </div>
     </>

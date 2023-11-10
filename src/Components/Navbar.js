@@ -30,30 +30,37 @@ const Navbar = () => {
     {
       text: "Home",
       icon: <HomeIcon />,
+      linkname:'',
     },
     {
       text: "Men",
       icon: <Man4OutlinedIcon />,
+      linkname: "men's clothing",
     },
     {
       text: "Women",
       icon: <WomanOutlinedIcon />,
+      linkname: "women's clothing",
     },
     {
       text: "Jewellery",
       icon: <HiveIcon />,
+      linkname: "jewellery",
     },
     {
       text: "Electronics",
       icon: <LaptopMacIcon />,
+      linkname: "electronics",
     },
     {
       text: "Wishlist",
       icon: <FavoriteBorderIcon />,
+      linkname: "wishlist",
     },
     {
       text: "Cart",
       icon: <ShoppinmgcartRoundedButton />,
+      linkname: "cart",
     },
   ];
   return (
@@ -85,7 +92,7 @@ const Navbar = () => {
         >
           <List>
             {menuOptions.map((item) => (
-              <Link to= {`/${item.text.toLowerCase()}`}>
+              <Link to= {`/${item.linkname.toLowerCase()}`}>
               <ListItem key={item.text} disablePadding>
                 <ListItemButton>
                   <ListItemIcon>{item.icon}</ListItemIcon>

@@ -131,7 +131,7 @@
     font-family: 'Roboto';
     color: #666;
   }
-  .wishlist:hover{
+  .wishlist:visited{
     color:#b82d44
   }
   .add-to-cart:hover{

@@ -415,6 +415,7 @@ nav {
     font-size: 1rem;
     padding: 0.8rem 2rem;
     cursor: pointer;
+    text-decoration: none;
   }
   .about-section-container {
     margin-top: 5rem !important;
