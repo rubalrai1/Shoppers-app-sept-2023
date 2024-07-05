@@ -13,6 +13,7 @@ import DataStorage from "./Components/Pages/context/DataStorage";
 import ProductDetails from "./Components/Pages/ProductDetails";
 import AddToCart from "./Components/Pages/context/AddToCard";
 import ScrollToTop from "./Components/ScrollToTop";
+import AddToWishlist from "./Components/Pages/context/Wishlist";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
       <div className="App">
         <DataStorage>
           <AddToCart>
+            <AddToWishlist>
             <BrowserRouter>
              <ScrollToTop>
               <Routes>
@@ -51,6 +53,7 @@ function App() {
               </Routes>
               </ScrollToTop>
             </BrowserRouter>
+            </AddToWishlist>
           </AddToCart>
         </DataStorage>
       </div>

@@ -28,8 +28,9 @@
         justify-content: space-around;
   }
   .wishlist:hover{
-    color:#b82d44
+    color:#6b101f
   }
+  
   .add-to-cart:hover{
     color:rgb(38, 38, 140)
   }
@@ -41,9 +42,8 @@
     height: 100%;
   }
   .product-card-image{
-    height: 587px;
-    width: 100%;
-    background-repeat: no-repeat;
+    width: 54%;
+    height: 42vh;
     /* aspect-ratio: auto;
     padding: 163px 0px 147px; */
   }

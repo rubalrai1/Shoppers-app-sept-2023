@@ -10,16 +10,23 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Button from "@mui/material/Button";
+import { CartContext } from "./context/AddToCard";
+import { WishlistContext } from "./context/Wishlist";
 
 import Navbar from "../Navbar";
 import ErrorBoundary from "./ErrorBoundary";
 
 function ProductDetails() {
   const [itemCount, setItemCount] = useState(1);
+  const [clicked, setClicked] = useState(false)
   const { apiData } = useContext(ApiContext);
+  const { cartItems, addToCart , removeFromCart} = useContext(CartContext);
+  const { wishlistItems, addToWishlist, removeFromWishlist} = useContext(WishlistContext)
   const { productId } = useParams();
   const id = parseInt(productId);
   const thisProduct = apiData && apiData.find((data) => data.id === id);
+  
+  console.log(cartItems, 'rubal')
 
   return (
     <>
@@ -37,15 +44,16 @@ function ProductDetails() {
               }}
             ></div>
             {/* </div> */}
-            <div className="product-description">{thisProduct.description}</div>
+            <div className="product-description">{thisProduct.title}</div>
             <div className="product-cardInfo">
               <h4>{thisProduct.category}</h4>
               <div className="detail-action">
                 <div className="priceGroup">{`$${thisProduct.price}`}</div>
                 <IconButton
+                  style= {{color: clicked ? '#b82d44': 'none'}}
                   className="wishlist"
                   aria-label="add to wishlist"
-                  onClick={() => alert("Added to wishlist")}
+                  onClick={() => addToWishlist(thisProduct)}
                 >
                   <FavoriteIcon />
                 </IconButton>
@@ -54,7 +62,7 @@ function ProductDetails() {
                     <IconButton
                       className="add-to-cart"
                       aria-label="add to cart"
-                      // onClick={() => addToCart(thisProduct)}
+                       onClick={() => addToCart(thisProduct)}
                     >
                       <ShoppingCartTwoToneIcon />
                     </IconButton>
