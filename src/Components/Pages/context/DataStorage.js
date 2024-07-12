@@ -6,7 +6,12 @@ const DataStorage=({ children }) =>{
 const [apiData, setApiData] =useState(null);
 const baseURL = "https://fakestoreapi.com/products";
 useEffect(()=>{
-  axios.get(baseURL).then((response) => {
+  axios.get(baseURL,{
+    headers: {
+      'Cache-Control': 'max-age=31536000',
+  }
+}
+).then((response) => {
     setApiData(response.data);
   });
 }

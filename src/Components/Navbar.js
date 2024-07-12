@@ -17,6 +17,7 @@ import WomanOutlinedIcon from "@mui/icons-material/WomanOutlined";
 import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import HiveIcon from "@mui/icons-material/Hive";
+import Face3TwoToneIcon from '@mui/icons-material/Face3TwoTone';
 import ShoppinmgcartRoundedButton from "@mui/icons-material/ShoppingCartRounded";
 import { Link } from "react-router-dom";
 
@@ -62,22 +63,30 @@ const Navbar = () => {
       icon: <ShoppinmgcartRoundedButton />,
       linkname: "cart",
     },
+    {
+      text: "Login",
+      icon: <Face3TwoToneIcon />,
+      linkname: "login",
+    },
   ];
   return (
     <nav>
       <div className="nav-logo-container" onClick={navigateHome}>
-        <img src={Logo} alt="logo" />
+        <img src={Logo} loading="lazy" alt="logo" />
       </div>
       <div className="navbar-links-container">
-        <Link to="/">Home</Link>
-        <Link to="/men's clothing">Men</Link>
-        <Link to="/women's clothing">Women</Link>
-        <Link to="/jewellery">Jewellery</Link>
-        <Link to="/electronics">Electronics</Link>
-        <Link to="/wishlist">Wishlist</Link>
+        <Link to="/" aria-label="home-page" tabindex="0">Home</Link>
+        <Link to="/men's clothing" aria-label="men-clothing" tabindex="0">Men</Link>
+        <Link to="/women's clothing" aria-label="women-clothing" tabindex="0">Women</Link>
+        <Link to="/jewellery" aria-label="jewellery" tabindex="0">Jewellery</Link>
+        <Link to="/electronics" aria-label="electronics" tabindex="0">Electronics</Link>
+        <Link to="/wishlist" aria-label="wishlist-page" tabindex="0">Wishlist</Link>
 
-        <Link to="/cart">
+        <Link to="/cart" aria-label="cart-page">
           <BsCart2 className="navbar-cart-icon" />
+        </Link>
+        <Link to="/login" aria-label="login" tabIndex="0">
+        <Face3TwoToneIcon/>
         </Link>
       </div>
       <div className="navbar-menu-container">
@@ -92,7 +101,7 @@ const Navbar = () => {
         >
           <List>
             {menuOptions.map((item) => (
-              <Link to= {`/${item.linkname.toLowerCase()}`}>
+              <Link to= {`/${item.linkname.toLowerCase()}`} aria-label={`${item.linkname.toLowerCase()}`} >
               <ListItem key={item.text} disablePadding>
                 <ListItemButton>
                   <ListItemIcon>{item.icon}</ListItemIcon>

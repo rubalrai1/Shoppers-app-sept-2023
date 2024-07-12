@@ -56,7 +56,6 @@ function ProductDetails() {
                 >
                   <FavoriteIcon />
                 </IconButton>
-                <div>
                   <Button
                     variant="contained"
                     className="add-to-cart"
@@ -69,6 +68,7 @@ function ProductDetails() {
                     Add to cart
                   </Button>
                 </div>
+                <div>
               </div>
             </div>
           </div>
@@ -80,4 +80,5 @@ function ProductDetails() {
   );
 }
 
-export default ProductDetails;
+export default React.memo(ProductDetails);
+
