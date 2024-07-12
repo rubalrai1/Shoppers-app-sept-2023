@@ -13,6 +13,7 @@ import ProductDetails from "./Components/Pages/ProductDetails";
 import CartProvider from "./Components/Pages/context/cart";
 import ScrollToTop from "./Components/ScrollToTop";
 import WishlistProvider from "./Components/Pages/context/wishlist";
+import LoginForm from "./Components/Pages/Login/LoginForm";
 
 function App() {
 
@@ -49,6 +50,7 @@ function App() {
                 ></Route>
                 <Route exact path="/cart" element={<Cart />}></Route>
                 <Route exact path="/wishlist" element={<Wishlist />}></Route>
+                <Route exact path="/login" element={<LoginForm />}></Route>
               </Routes>
               </ScrollToTop>
             </BrowserRouter>

@@ -20,7 +20,7 @@ const Home = () => {
             Your favourite brands are on sale!!!
           </h3>
           <p className="primary-text">NEW SEASON. NEW MOOD. NEW YOU.</p>
-          <Link to="https://www.myntra.com">
+          <Link to="https://www.myntra.com" aria-label="Visit Myntra Website" tabindex="0">
           <button className="secondary-button" tabIndex="0" role="button" 
           // onClick={event =>  window.location.href='https://www.myntra.com/'}
           >
@@ -29,7 +29,7 @@ const Home = () => {
           </Link>
         </div>
         <div className="home-image-section">
-          <img src={adImage} alt="background-image" />
+          <img src={adImage} alt="background-image" loading="lazy"/>
         </div>
       </div>
       <div className="card-container">

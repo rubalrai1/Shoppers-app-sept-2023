@@ -35,7 +35,9 @@ const HomeProductImageCard = () => {
     <div className="home-card-container">
       {homePageProductData &&
         homePageProductData.map((prod) => (
-          <div className="home-card" onClick={()=>navigate(`/${prod.apiText}`)} role="button" tabIndex='0'>
+          <div 
+          className="home-card" 
+          onClick={()=>navigate(`/${prod.apiText}`)} role="button" tabIndex='0'>
             {/* <span class="tooltiptext">{prod.text}</span> */}
             <div
               key={prod.id}

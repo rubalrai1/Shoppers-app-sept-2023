@@ -24,7 +24,7 @@ export default function ImgMediaCard({id, image, title, category, price}) {
         <div className="card">
             <ToastContainer/>
             <div className="wrapper">
-            <Link to={`/products/${thisProduct.id}`}>
+            <Link to={`/products/${thisProduct.id}`} aria-label="product-details">
                 <div className="card_img">
                   <div className="card-image" style={{backgroundImage: `url(${image})`, backgroundSize:"cover"}}>
         </div>
